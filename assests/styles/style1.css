@@ -1,0 +1,715 @@
+*{
+    margin: 0px;
+    padding: 0px !important;
+    box-sizing: border-box;
+  }
+  html{
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  /* Font  */
+  /* Include the fonts */
+  @font-face {
+    font-family: 'Poppins';
+    src: url('../font/Poppins/Poppins-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Raleway';
+    src: url('../font/Raleway/static/Raleway-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Irish_Grover';
+    src: url('../font/Irish_Grover/IrishGrover-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Nunito';
+    src: url('../font/Nunito/Nunito-Italic-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Exo_2';
+    src: url('../font/Exo_2/static/Exo2-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  /* color  */
+  :root {
+    --primary: #ffffff; 
+    --secondary: rgba(97, 81, 0, 1);
+    --accent: #ffffff;
+    --background: rgba(6, 39, 52, 1);
+    --hover: #FFA500;     
+    --black: #000000;     
+  }
+  body {
+    font-family: 'Irish_Grover', sans-serif !important;
+    margin:0 auto !important;
+    overflow-x: hidden;
+    background-color: var(--background) !important;
+    color: var(--primary) !important;
+    /* cursor: pointer;
+    cursor: url('../Images/Bj.png') 0 0, auto; */
+  }
+  h1, h2, h3, h4, h5, h6,a {
+    font-family: 'Irish_Grover', sans-serif !important; 
+    font-weight: 500;
+  }
+
+
+  /* cursor style */
+  .cursor {
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    border-radius: 50%;
+    background: transparent;
+    pointer-events: none;
+    z-index: 111;
+    border: 1px solid #fff;
+    transition: all 0.2s ease-out;
+    animation: moveCursor1 .5s infinite alternate;
+}
+
+.expand {
+  background: transparent;
+  animation: moveCursor2 .5s forwards;
+  border: 1px solid yellow;
+}
+
+@keyframes moveCursor1 {
+  from {
+      transform: scale(1);
+  }
+
+  to {
+      transform: scale(.8);
+  }
+}
+
+@keyframes moveCursor2 {
+  0% {
+      transform: scale(1);
+  }
+
+  50% {
+      transform: scale(2.5);
+  }
+
+  100% {
+      transform: scale(1);
+      opacity: 0;
+  }
+}
+
+/* cursor ends */
+
+
+/* ==preloader=== */
+
+.preloader{
+  position: fixed;
+    height: 100%;
+    top: 0;
+    width: 100vw;
+    background-color: #000000bd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999999;
+}
+.ball {
+  position: relative;
+  bottom: 50px;
+  left: calc(100% - 20px);
+  width: 50px;
+  height: 50px;
+  background: #fff;
+  border-radius: 50%;
+  animation: ball-move8234 3s ease-in-out 1s infinite alternate;
+}
+
+.ball::after {
+  position: absolute;
+  content: '';
+  top: 25px;
+  right: 5px;
+  width: 5px;
+  height: 5px;
+  background: #000;
+  border-radius: 50%;
+}
+
+
+.bar {
+  width: 200px;
+  height: 12.5px;
+  background: #FFDAAF;
+  border-radius: 30px;
+  transform: rotate(-15deg);
+  animation: up-down6123 3s ease-in-out 1s infinite alternate;
+}
+
+@keyframes up-down6123 {
+  from {
+    transform: rotate(-15deg);
+  }
+
+  to {
+    transform: rotate(15deg);
+  }
+}
+
+@keyframes ball-move8234 {
+  from {
+    left: calc(100% - 40px);
+    transform: rotate(360deg);
+  }
+
+  to {
+    left: calc(0% - 20px);
+    transform: rotate(0deg);
+  }
+}
+
+/* preloader ends */
+
+
+
+
+  .container-fluid{
+    padding: 0px 100px !important;
+  }
+
+ /* */
+
+ .header1{
+  /* position:sticky;
+  top:0; */
+ 
+  transition: transform 300ms;
+  background:var(--background)
+}
+
+.hide{
+  transform: translateY(-130px);
+}
+
+
+/* ==========hero============ */
+
+#hero-section{
+  /* position: relative; */
+  padding-top:80px;
+  padding-bottom: 80px;
+}
+
+#hero-section .hero-text-container{
+  display: flex;
+  justify-content: center;
+  align-items:center ;
+  height:100%
+}
+#hero-section .hero-text{
+  height: 50%;
+}
+#hero-section .hero-text h2{
+font-size: 60px;
+}
+#hero-section .hero-text h1{
+  font-size: 80px;
+  color:var(--secondary)
+}
+.hero-img-container{
+  
+  display: flex;
+  justify-content: center;
+  align-items:center ;
+}
+.heroImg img{
+  transition: transform 0.5s ease, opacity 0.5s ease;
+ 
+}
+#hero-section .clouds-container {
+  /* position: relative; */
+}
+
+
+
+#background-wrap {
+  bottom: 0;
+left: 0;
+padding-top: 50px;
+position: absolute;
+right: 0;
+top: 0;
+z-index: 99;
+}
+
+/* KEYFRAMES */
+
+@-webkit-keyframes animateCloud {
+  0% {
+      margin-left: -1000px;
+  }
+  100% {
+      margin-left: 100%;
+  }
+}
+
+@-moz-keyframes animateCloud {
+  0% {
+      margin-left: -1000px;
+  }
+  100% {
+      margin-left: 100%;
+  }
+}
+
+@keyframes animateCloud {
+  0% {
+      margin-left: -1000px;
+  }
+  100% {
+      margin-left: 100%;
+  }
+}
+
+/* ANIMATIONS */
+
+.x1 {
+-webkit-animation: animateCloud 35s linear infinite;
+-moz-animation: animateCloud 35s linear infinite;
+animation: animateCloud 35s linear infinite;
+
+-webkit-transform: scale(0.65);
+-moz-transform: scale(0.65);
+transform: scale(0.65);
+}
+
+.x2 {
+-webkit-animation: animateCloud 20s linear infinite;
+-moz-animation: animateCloud 20s linear infinite;
+animation: animateCloud 20s linear infinite;
+
+-webkit-transform: scale(0.3);
+-moz-transform: scale(0.3);
+transform: scale(0.3);
+}
+
+.x3 {
+-webkit-animation: animateCloud 30s linear infinite;
+-moz-animation: animateCloud 30s linear infinite;
+animation: animateCloud 30s linear infinite;
+
+-webkit-transform: scale(0.5);
+-moz-transform: scale(0.5);
+transform: scale(0.5);
+}
+
+.x4 {
+-webkit-animation: animateCloud 18s linear infinite;
+-moz-animation: animateCloud 18s linear infinite;
+animation: animateCloud 18s linear infinite;
+
+-webkit-transform: scale(0.4);
+-moz-transform: scale(0.4);
+transform: scale(0.4);
+}
+
+.x5 {
+-webkit-animation: animateCloud 25s linear infinite;
+-moz-animation: animateCloud 25s linear infinite;
+animation: animateCloud 25s linear infinite;
+
+-webkit-transform: scale(0.55);
+-moz-transform: scale(0.55);
+transform: scale(0.55);
+}
+
+/* OBJECTS */
+
+.cloud {
+background: rgb(152, 150, 150);
+background: -moz-linear-gradient(top,  rgb(152, 150, 150) 5%, rgb(31, 30, 30) 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(5%,#fff), color-stop(100%,rgb(31, 30, 30)));
+background: -webkit-linear-gradient(top,  rgb(152, 150, 150) 5%,rgb(31, 30, 30) 100%);
+background: -o-linear-gradient(top,  rgb(152, 150, 150) 5%,rgb(31, 30, 30) 100%);
+background: -ms-linear-gradient(top,  rgb(152, 150, 150) 5%,rgb(31, 30, 30) 100%);
+background: linear-gradient(top,  rgb(152, 150, 150) 5%,rgb(31, 30, 30) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgb(152, 150, 150)', endColorstr='rgb(31, 30, 30)',GradientType=0 );
+
+-webkit-border-radius: 100px;
+-moz-border-radius: 100px;
+border-radius: 100px;
+
+-webkit-box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1);
+-moz-box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1);
+box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1);
+
+height: 120px;
+position: relative;
+width: 350px;
+}
+
+.cloud:after, .cloud:before {
+  background: rgb(152, 150, 150);
+content: '';
+position: absolute;
+z-indeX: -1;
+}
+
+.cloud:after {
+-webkit-border-radius: 100px;
+-moz-border-radius: 100px;
+border-radius: 100px;
+
+height: 100px;
+left: 50px;
+top: -50px;
+width: 100px;
+}
+
+.cloud:before {
+-webkit-border-radius: 200px;
+-moz-border-radius: 200px;
+border-radius: 200px;
+
+width: 180px;
+height: 180px;
+right: 50px;
+top: -90px;
+}
+
+
+/* here bird animination code  */
+
+.animination-container{
+  z-index: 1;
+	position: relative;
+  width:100%
+}
+
+.bird{
+  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/174479/bird-cells-new.svg');
+  /* filter: invert(34%) sepia(55%) saturate(427%) hue-rotate(141deg) brightness(93%) contrast(91%); */
+  filter: invert(65%) sepia(9%) saturate(0%) hue-rotate(180deg) brightness(95%) contrast(85%);
+  background-size: auto 100%;
+  width: 88px;
+  height: 125px;
+  will-change: background-position;
+
+  animation-name: fly-cycle;
+  animation-timing-function: steps(10);
+  animation-iteration-count: infinite;
+}
+
+.bird-one{
+  animation-duration: 1s;
+  animation-delay: -0.5s;
+
+}
+.bird-two{
+  animation-duration: 0.9;
+  animation-delay: -0.75.s;
+
+}
+.bird-three{
+  animation-duration:1.25s;
+  animation-delay: -0.25s
+
+}
+.bird-four{
+  animation-duration: 1.1s;
+  animation-delay: -0.5s;
+}
+
+.bird-container {
+position: absolute;
+top: 10%;
+left: -3%;
+transform: scale(0) translateX(-10vw);
+will-change: transform;
+
+animation-name: fly-right-one;
+animation-timing-function: linear;
+animation-iteration-count: infinite;
+}
+
+.bird-container-one{
+animation-duration: 15s;
+animation-delay: 0;
+}
+
+.bird-container-two{
+animation-duration: 16s;
+animation-delay: 1s;
+}
+
+.bird-container-three{
+animation-duration: 14.6s;
+animation-delay: 9.5s;
+}
+
+.bird-container-four {
+  animation-duration: 16s;
+  animation-delay: 10.25s;
+}
+
+@keyframes fly-cycle {
+
+100% {
+  background-position: -900px 0;
+}
+
+}
+
+@keyframes fly-right-one {
+
+0% {
+  transform: scale(0.3) translateX(-10vw);
+}
+
+10% {
+  transform: translateY(2vh) translateX(10vw) scale(0.4);
+}
+
+20% {
+  transform: translateY(0vh) translateX(30vw) scale(0.5);
+}
+
+30% {
+  transform: translateY(4vh) translateX(50vw) scale(0.6);
+}
+
+40% {
+  transform: translateY(2vh) translateX(70vw) scale(0.6);
+}
+
+50% {
+  transform: translateY(0vh) translateX(90vw) scale(0.6);
+}
+
+60% {
+  transform: translateY(0vh) translateX(110vw) scale(0.6);
+}
+
+100% {
+  transform: translateY(0vh) translateX(110vw) scale(0.6);
+}
+
+}
+
+@keyframes fly-right-two {
+
+0% {
+  transform: translateY(-2vh) translateX(-10vw) scale(0.5);
+}
+
+10% {
+  transform: translateY(0vh) translateX(10vw) scale(0.4);
+}
+
+20% {
+  transform: translateY(-4vh) translateX(30vw) scale(0.6);
+}
+
+30% {
+  transform: translateY(1vh) translateX(50vw) scale(0.45);
+}
+
+40% {
+  transform: translateY(-2.5vh) translateX(70vw) scale(0.5);
+}
+
+50% {
+  transform: translateY(0vh) translateX(90vw) scale(0.45);
+}
+
+51% {
+  transform: translateY(0vh) translateX(110vw) scale(0.45);
+}
+
+100% {
+  transform: translateY(0vh) translateX(110vw) scale(0.45);
+}
+
+}
+
+
+/* bird animination for head  */
+
+/* Base bird animation styles */
+.crow-animation-head {
+  /* Only show on hover or active */
+   position: absolute;
+   top:-60%;
+   left:0;
+   transform: translateX(-50%);
+   animation: bounce 1.5s infinite ease-in-out; /* Bounce animation */
+ }
+ 
+ @keyframes fly-cycle {
+   100% {
+     background-position: -900px 0;
+   }
+ }
+ 
+ .crow-head {
+   background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/174479/bird-cells-new.svg');
+   filter: invert(65%) sepia(9%) saturate(0%) hue-rotate(180deg) brightness(95%) contrast(85%);
+   background-size: auto 100%;
+   width: 88px;
+   height: 124px;
+   animation-name: fly-cycle;
+   animation-timing-function: steps(10); /* Ensures smooth frame progression */
+   animation-iteration-count: infinite;
+   animation-duration: 2s; /* Slower wing movement (increase duration for slower speed) */
+ }
+
+
+
+/* ===========about section======= */
+
+#about{
+  padding-top:80px !important;
+  padding-bottom: 80px !important;
+}
+#about .about-border{
+}
+
+#about .head{
+  position:relative;  display: flex;
+}
+
+#about .head h1 {
+  font-size: 80px;
+  color: var(--primary);
+  display: inline-flex; /* To align the spans horizontally */
+}
+
+#about .head h1 span {
+  display: inline-block; /* Allow animation on each letter individually */
+  animation: bounce 1.5s infinite; /* Animation applied to each letter */
+  animation-delay: calc(var(--index) * 0.2s); /* Delay based on custom property */
+}
+
+#about .head h1 span:nth-child(1) { --index: 0; }
+#about .head h1 span:nth-child(2) { --index: 1; }
+#about .head h1 span:nth-child(3) { --index: 2; }
+#about .head h1 span:nth-child(4) { --index: 3; }
+#about .head h1 span:nth-child(5) { --index: 4; }
+#about .head h1 span:nth-child(6) { --index: 5; }
+#about .head h1 span:nth-child(7) { --index: 6; } /* Space between "About" and "me" */
+#about .head h1 span:nth-child(8) { --index: 7; }
+#about .head h1 span:nth-child(9) { --index: 8; }
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px); /* Adjust height of bounce */
+  }
+}
+
+#about .about-left{
+    /* background: var(--primary); */
+    border: solid white;
+    border-color:white;
+    border-width: 3px 3px 5px 5px;
+    border-radius:4% 95% 6% 95%/95% 4% 92% 5%;
+    transform: rotate(-4deg);
+    /* background: rgb(152, 150, 150); */
+
+}
+
+#about .about-owl .item{
+  height:700px;
+}
+
+#about .item .about-img{
+  height:100%;
+  width:100%;
+  position: relative;
+  padding: 50px !important;
+}
+
+#about .about-img .final-image{
+  height:100%;
+  width:100%;
+  object-fit: cover; /* Ensures the image scales well */
+  transition: opacity 0.5s ease;
+  border-radius: 50px;
+  box-shadow: rgba(255, 255, 255, 0.16) 0px 3px 6px, rgba(255, 255, 255, 0.23) 0px 3px 6px;
+
+}
+#about .about-right{
+  display: flex;
+  justify-content: center;
+
+  /* transform: rotate(2deg); */
+  /* box-shadow: rgba(229, 229, 229, 0.25) 0px 2px 5px -1px, rgba(255, 254, 254, 0.3) 0px 1px 3px -1px; */
+  /* box-shadow: rgba(247, 247, 248, 0.25) 0px 30px 60px -12px inset, rgba(255, 255, 255, 0.3) 0px 18px 36px -18px inset; */
+}
+
+#about .about-content-container{
+  width:90%;
+  display: flex;
+  justify-content: center;
+}
+#about .about-content-container .about-content{
+  padding: 50px !important;
+}
+
+#about .about-content-container .about-content h1{
+  font-size: 40px;
+  color:rgb(224, 190, 38);
+  /* font-family: 'Nunito' !important; */
+  font-family: 'Exo_2' !important;
+  font-weight: 700;
+
+
+}
+#about .about-content-container .about-content h3{
+  font-size:25px;
+  font-family: 'Exo_2' !important;
+}
+
+#about .about-content-container .about-content .other-details{
+  display: flex;
+  gap: 20px;
+  padding-top: 20px !important;
+}
+
+.about-content .other-details ul{
+  list-style-type: none;
+}
+
+.about-content .other-details ul li{
+  font-family: 'Exo_2' !important;
+  font-size: 22px;
+  padding-top: 10px !important;
+}
+.about-content .other-details ul li img{
+  height:50px;
+  width:50px;
+}
+
+.about-content .resume{
+  display: flex;
+  justify-content: start;
+}
+

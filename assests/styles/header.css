@@ -1,0 +1,103 @@
+/* header */
+
+
+#desknav{
+  position:sticky;
+  top:0
+}
+.navBox{
+    display: flex;
+    justify-content: space-between;
+    width:100%;
+    align-items: center;
+  
+  }
+  .navbar-brand{
+    /* background: #FFA500; */
+    height:200px;
+    width: 200px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+  }
+  .navbar-brand img{
+    width: 100%;
+    height:100%;
+    border-radius: 50%;
+  }
+  .navBox .navbar-nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+  .navBox .navbar-nav .nav-item{
+    position: relative;
+    padding:0px 20px !important
+  }
+  .navBox .navbar-nav .nav-item .nav-link{
+    font-size: 30px;
+    color: var(--secondary);
+  }
+
+/* Base bird animation styles */
+.crow-animation {
+  display: none; /* Only show on hover or active */
+  position: absolute;
+  top: -40px;
+  left: 35%;
+  transform: translateX(-50%);
+  animation: bounce 1.5s infinite ease-in-out; /* Bounce animation */
+}
+
+@keyframes fly-cycle {
+  100% {
+    background-position: -900px 0;
+  }
+}
+
+.crow {
+  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/174479/bird-cells-new.svg');
+  filter: invert(65%) sepia(9%) saturate(0%) hue-rotate(180deg) brightness(95%) contrast(85%);
+  background-size: auto 100%;
+  width: 44px;
+  height: 62px;
+  animation-name: fly-cycle;
+  animation-timing-function: steps(10); /* Ensures smooth frame progression */
+  animation-iteration-count: infinite;
+  animation-duration: 2s; /* Slower wing movement (increase duration for slower speed) */
+}
+
+/* Show bird on hover or active */
+.nav-link:hover .crow-animation,
+.nav-link.active .crow-animation {
+  display: block;
+}
+
+/* Wing flapping using sprite sheet */
+@keyframes flap-wings {
+  100% {
+    background-position: -900px 0; /* Total width of sprite movement */
+  }
+}
+
+/* Bouncing animation */
+@keyframes bounce {
+  0%, 100% {
+    transform: translate(-50%, 0);
+  }
+  50% {
+    transform: translate(-50%, -10px);
+  }
+}
+
+
+  
+  /* Show crow on hover or active */
+  /* .nav-link:hover .crow-animation,
+  .nav-link.active .crow-animation {
+    display: block;
+  } */
+  .nav-link.active{
+    color: rgb(152, 150, 150) !important;
+  }
